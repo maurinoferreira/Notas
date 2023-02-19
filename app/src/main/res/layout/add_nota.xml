@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#EEEEEE"
+    android:alpha="0.8"
+    android:orientation="vertical">
+
+
+            <TextView
+                android:fontFamily="@font/open_sans_bold"
+                android:id="@+id/nota_nova"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:layout_marginTop="25sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Adicionar Nota" />
+
+            <EditText
+                android:id="@+id/titulo"
+                android:fontFamily="@font/open_sans_regular"
+                android:background="@drawable/back_edt"
+                android:layout_marginTop="80dp"
+                android:padding="10sp"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:maxLength="30"
+                android:backgroundTint="#FFE082"
+                android:alpha="0.7"
+                android:layout_marginRight="10sp"
+                android:layout_marginLeft="10sp"
+                android:hint="Titulo..."
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/descricao"
+                android:fontFamily="@font/open_sans_regular"
+                android:background="@drawable/back_edt"
+                android:layout_marginTop="150dp"
+                android:padding="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginLeft="10sp"
+                android:hint="Descrição..."
+                android:lines="18"
+                android:backgroundTint="#FFE082"
+                android:alpha="0.7"
+                android:gravity="top"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/salvar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:srcCompat="@drawable/done"
+                android:layout_margin="30sp"
+                android:backgroundTint="#9E9E9E"
+                android:layout_gravity="bottom|end"
+                tools:ignore="MissingConstraints" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
