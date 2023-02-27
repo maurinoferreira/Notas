@@ -48,7 +48,7 @@
                 android:layout_marginRight="10sp"
                 android:layout_marginLeft="10sp"
                 android:hint="Descrição..."
-                android:lines="18"
+                android:lines="15"
                 android:gravity="top"
                 android:backgroundTint="#FFE082"
                 android:alpha="0.7"

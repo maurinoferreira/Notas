@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
+import androidx.viewpager.widget.ViewPager;
 
 import android.app.AlertDialog;
 import android.app.SearchManager;
@@ -34,6 +35,7 @@ import com.brasil.app.notas.dal.NotaDAO;
 import com.brasil.app.notas.modelo.Nota;
 import com.brasil.app.notas.modelo.NotasAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.tabs.TabLayout;
 import com.mancj.materialsearchbar.MaterialSearchBar;
 
 import java.util.ArrayList;
@@ -68,11 +70,10 @@ public class MainActivity extends AppCompatActivity implements LifecycleOwner, M
         configuracao();
         eventos();
 
-        actionBar = getSupportActionBar();
-
-
         Notas notas = new Notas();
         notas.execute();
+
+        actionBar = getSupportActionBar();
 
     }
 
@@ -82,6 +83,8 @@ public class MainActivity extends AppCompatActivity implements LifecycleOwner, M
         floatbuttom = findViewById(R.id.floatingActionButton);
         semNotas = findViewById(R.id.layout_sem_notas);
         searchBar = (MaterialSearchBar) findViewById(R.id.searchBar);
+
+
     }
 
     private void eventos(){
@@ -142,7 +145,7 @@ public class MainActivity extends AppCompatActivity implements LifecycleOwner, M
     }
 
 
-    public class Notas extends AsyncTask<List<Nota>, Void, List<Nota>>
+   public class Notas extends AsyncTask<List<Nota>, Void, List<Nota>>
     {
 
         @Override
